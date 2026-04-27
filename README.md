@@ -1,21 +1,31 @@
 # 🚀 Smart Career AI
 
-AI-powered resume analyzer that matches resumes with job descriptions and identifies missing skills.
+An AI-powered web application that analyzes resumes against job descriptions and identifies missing skills.
 
 ## 🌐 Live Demo
-Backend: https://your-render-url.onrender.com
+Backend API: https://smart-career-ai.onrender.com
+
+---
 
 ## 🧠 Features
-- 📄 Resume parsing (PDF)
-- 🎯 Job match scoring
-- 🔍 Missing skills detection
-- ⚡ Fast API response
+
+- 📄 Upload Resume (PDF)
+- 🎯 Match Score Calculation
+- 🔍 Missing Skills Detection
+- ⚡ Fast API Response
+- 🌐 Deployed Backend
+
+---
 
 ## 🛠 Tech Stack
-- Python (Flask)
-- Scikit-learn (NLP)
-- HTML + JS (Frontend)
-- Render (Deployment)
+
+- **Backend**: Python, Flask
+- **ML/NLP**: Scikit-learn
+- **PDF Parsing**: PyPDF2
+- **Frontend**: HTML, JavaScript
+- **Deployment**: Render
+
+---
 
 ## 📦 API Endpoints
 
@@ -23,15 +33,15 @@ Backend: https://your-render-url.onrender.com
 Check if API is running
 
 ### POST /analyze
-Upload resume + job description
+Analyze resume vs job description
 
-## 📸 Demo
-(Add screenshots here)
+**Request:**
+- resume → PDF file
+- job_desc → text
 
-## 🚀 Future Improvements
-- AI resume rewriting
-- Job recommendations
-- Dashboard analytics
-
-## 👨‍💻 Author
-Keerthi N M
+**Response:**
+```json
+{
+  "match_score": 75,
+  "missing_skills": ["docker", "kubernetes"]
+}
