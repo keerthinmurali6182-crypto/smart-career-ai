@@ -1,5 +1,7 @@
 flask
 flask-cors
-scikit-learn
-PyPDF2
 gunicorn
+scikit-learn
+numpy
+scipy
+pandas

@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f3f2ef;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT PANEL */
+.left {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.left textarea {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.left button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* RIGHT PANEL */
+.right {
+  width: 70%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* SCORE CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* JOB CARD */
+.jobCard {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #0a66c2;
+}
+
+/* SKILL CARD */
+.skillCard {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* COLORS */
+.green {
+  color: green;
+  margin-right: 5px;
+}
+
+.red {
+  color: red;
+  margin-right: 5px;
+}
