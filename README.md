@@ -38,6 +38,7 @@ Backend API:
 Check if API is running
 
 **Response:**
+```md
 ```json
 {
   "status": "API is running"
