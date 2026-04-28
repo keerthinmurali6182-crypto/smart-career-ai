@@ -6,7 +6,8 @@ An AI-powered web application that analyzes resumes against job descriptions and
 
 ## 🌐 Live Demo
 
-- Backend API: https://smart-career-ai.onrender.com
+Backend API:  
+👉 https://smart-career-ai.onrender.com  
 
 ---
 
@@ -33,6 +34,7 @@ An AI-powered web application that analyzes resumes against job descriptions and
 ## 📦 API Endpoints
 
 ### 🔹 GET /
+
 Check if API is running
 
 **Response:**
@@ -40,19 +42,17 @@ Check if API is running
 {
   "status": "API is running"
 }
-
-### 🔹 **POST /analyze**
+🔹 POST /analyze
 
 Analyze resume vs job description
 
-**Request:**
-- resume → PDF file  
-- job_desc → text input  
+Request:
 
----
+resume → PDF file
+job_desc → text input
 
-**Response:**
-```json
+Response:
+
 {
   "match_score": 75,
   "missing_skills": ["docker", "kubernetes"]
@@ -70,6 +70,7 @@ Backend is deployed on Render:
 
 👨‍💻 Author
 GitHub: @keerthinmurali6182-crypto
+
 ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub and feel free to contribute!
