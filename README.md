@@ -44,11 +44,6 @@ Check if API is running
   "status": "API is running"
 }
 
-```json
-{
-  "status": "API is running"
-}
-
 ## 🔹 POST /analyze
 
 Analyze resume vs job description
