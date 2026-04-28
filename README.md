@@ -44,3 +44,19 @@ Check if API is running
   "status": "API is running"
 }
 
+## 🔹 POST /analyze
+
+Analyze resume vs job description
+
+**Request:**
+- resume → PDF file  
+- job_desc → text input  
+
+---
+
+**Response:**
+```json
+{
+  "match_score": 75,
+  "missing_skills": ["docker", "kubernetes"]
+}
