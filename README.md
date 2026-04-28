@@ -55,8 +55,25 @@ Analyze resume vs job description
 ---
 
 **Response:**
+```md
 ```json
 {
   "match_score": 75,
   "missing_skills": ["docker", "kubernetes"]
 }
+
+⭐ How It Works
+Upload your resume (PDF)
+Provide job description
+AI compares skills
+Returns match score + missing skills
+
+🌍 Deployment
+Backend is deployed on Render:
+👉 https://smart-career-ai.onrender.com
+
+👨‍💻 Author
+GitHub: @keerthinmurali6182-crypto
+
+⭐ Support
+If you like this project, give it a ⭐ on GitHub and feel free to contribute!
