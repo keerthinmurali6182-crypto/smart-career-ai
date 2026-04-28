@@ -42,35 +42,50 @@ Check if API is running
 {
   "status": "API is running"
 }
-🔹 POST /analyze
+
+## 🔹 POST /analyze
 
 Analyze resume vs job description
 
-Request:
+**Request:**
+- resume → PDF file  
+- job_desc → text input  
 
-resume → PDF file
-job_desc → text input
+---
 
-Response:
-
+**Response:**
+```json
 {
   "match_score": 75,
   "missing_skills": ["docker", "kubernetes"]
 }
 
 ⭐ How It Works
-Upload your resume (PDF)
-Provide job description
-AI compares skills
-Returns match score + missing skills
-🌍 Deployment
 
+
+Upload your resume (PDF)
+
+
+Provide job description
+
+
+AI compares skills
+
+
+Returns match score + missing skills
+
+
+
+🌍 Deployment
 Backend is deployed on Render:
 👉 https://smart-career-ai.onrender.com
 
 👨‍💻 Author
+
+
 GitHub: @keerthinmurali6182-crypto
 
-⭐ Support
 
+
+⭐ Support
 If you like this project, give it a ⭐ on GitHub and feel free to contribute!
