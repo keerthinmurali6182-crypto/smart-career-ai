@@ -1,177 +1,130 @@
 # 🚀 Smart Career AI
 
-An AI-powered web application that analyzes resumes against job descriptions and identifies missing skills, along with a match score.
+An AI-powered Resume Analyzer SaaS that evaluates resumes against job descriptions, calculates ATS score, recommends jobs, and identifies skill gaps.
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Backend
 
-### Backend (Render)
-
-👉 [https://smart-career-ai.onrender.com](https://smart-career-ai.onrender.com)
-
-### Frontend (Vercel)
-
-👉 [https://smart-career-3wj8yno4x-keerthinmurali6182-cryptos-projects.vercel.app](https://smart-career-3wj8yno4x-keerthinmurali6182-cryptos-projects.vercel.app)
+https://smart-career-ai.onrender.com
 
 ---
 
 ## 🧠 Features
 
-* 📄 Upload Resume (PDF)
-* 🎯 Job Description Matching
-* 📊 Match Score Calculation
-* 🔍 Missing Skills Detection
-* ⚡ Fast API Response
-* 🌐 Deployed Backend API
+- 📄 Resume analysis (paste-based input)
+- 🎯 ATS Score calculation
+- 🔍 Skill extraction from resume
+- 💼 Job recommendation system
+- 🧠 Skill gap analysis
+- ⚡ Fast Flask REST API
+- 🌍 CORS-enabled for frontend integration
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Backend
-
-* Python
-* Flask
-* Scikit-learn
-* NLP (TF-IDF / vectorization)
-* PDF parsing libraries
+- Python
+- Flask
+- Flask-CORS
 
 ### Frontend
-
-* React (or Vanilla JS depending on your setup)
-* HTML / CSS / JavaScript
+- React.js
+- Axios
 
 ### Deployment
-
-* Backend: Render
-* Frontend: Vercel
-
----
-
-## ⚠️ Deployment Architecture (IMPORTANT)
-
-This project is split into two parts:
-
-### ✅ Backend (Flask API)
-
-* Hosted on **Render**
-* Handles resume parsing, ML model, and scoring
-
-### ✅ Frontend
-
-* Hosted on **Vercel**
-* Calls backend API for predictions
-
-> ❌ IMPORTANT: Vercel does NOT directly run full Flask servers with ML models efficiently.
-> ✔️ That is why backend is deployed separately on Render.
+- Render (Backend)
+- Local / Vercel (Frontend)
 
 ---
 
-## 🔧 API Usage
+## 📂 Project Structure
+backend/
+│ app.py
+│ requirements.txt
+│
+frontend/
+│ src/
+│ App.js
+│ package.json
 
-### Endpoint:
+
+---
+
+## 🚀 API Endpoints
+
+### 🔹 Home
+```
+
+GET /
 
 ```
-POST /analyze
-```
 
-### Example Request:
-
+Response:
 ```json
 {
-  "resume_text": "...",
-  "job_description": "..."
+  "message": "🚀 Smart Career AI Running"
 }
-```
 
-### Example Response:
 
-```json
+🔹 ATS Score
+POST /resume-score
+
+Request:
+
 {
-  "match_score": 82,
-  "missing_skills": ["Docker", "AWS"]
+  "resume": "python flask sql machine learning",
+  "job_description": "python flask aws backend development"
 }
-```
 
----
+Response:
 
-## 📦 Installation (Local Setup)
+{
+  "ats_score": 85.5,
+  "matched_skills": ["python", "flask", "sql"]
+}
 
-### 1. Clone repo
+🔹 Job Recommendations
+POST /recommend-jobs
 
-```bash
-git clone https://github.com/your-username/smart-career-ai.git
-cd smart-career-ai
-```
 
-### 2. Backend setup
+🔹 Skill Gap Analysis
+POST /skill-gap
 
-```bash
+💻 How to Run Locally
+Backend
 cd backend
 pip install -r requirements.txt
 python app.py
-```
 
-### 3. Frontend setup
+Runs on:
+http://localhost:5000
 
-```bash
+Frontend
 cd frontend
 npm install
 npm start
-```
 
----
+Runs on:
+http://localhost:3000
 
-## 🚀 Deployment Guide
+🔗 Frontend Configuration
 
-### Backend (Render)
+Make sure your React frontend uses:
+const API = "https://smart-career-ai.onrender.com";
 
-1. Push backend folder to GitHub
-2. Connect Render
-3. Add build command:
+📊 Example Output
+ATS Score: 90%
+Matched Skills: python, flask, sql, react, aws, docker
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Start command:
+🚀 Future Improvements
+🔐 Login system
+💳 Stripe payments
+📄 PDF resume upload
+🤖 AI-based scoring (NLP/LLM)
+📊 Dashboard analytics
+🌐 Full SaaS deployment
 
-   ```bash
-   python app.py
-   ```
-
-### Frontend (Vercel)
-
-1. Connect GitHub repo
-2. Set framework: React / Vite
-3. Add backend API URL in `.env`:
-
-   ```env
-   REACT_APP_API_URL=https://smart-career-ai.onrender.com
-   ```
-
----
-
-## ❗ Common Issues
-
-### ❌ Vercel deployment fails
-
-* Ensure backend is NOT deployed on Vercel
-* Only frontend should be on Vercel
-
-### ❌ API not working
-
-* Check Render backend URL
-* Ensure CORS is enabled in Flask
-
----
-
-## 👨‍💻 Author
-
-Keerthi N M
-
----
-
-## 📌 License
-
-MIT
+##👨‍💻 Author
+Built using Flask + React 🚀
